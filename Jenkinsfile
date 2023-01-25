@@ -1,23 +1,46 @@
 pipeline {
-   agent any
 
-    stages {
-        stage('Foo') {
-            steps {
-              echo 'Hello world'
-            }
-        }
+  agent any
 
-        stage('Bar') {
-                steps {
-                  echo 'Hello world'
-                }
-            }
+  stages {
+
+    stage('Code Quality') {
+      steps {
+        echo 'Code Quality'
+      }
     }
 
-    post {
-       always {
-           echo 'I will always say Hello again!'
-       }
-        }
+    stage('Style Checks') {
+      steps {
+        echo 'Code Quality'
+      }
     }
+
+    stage('Unit Tests') {
+      steps {
+        echo 'Unit tests'
+      }
+    }
+
+    stage('Download Dependencies') {
+      steps {
+        echo 'Download Dependencies'
+      }
+    }
+
+    stage('Prepare Artifact') {
+      steps {
+        echo 'Prepare Artifact'
+      }
+    }
+
+    stage('Publish Artifact') {
+      steps {
+        echo 'Publish Artifact'
+      }
+    }
+
+
+  }
+
+}
