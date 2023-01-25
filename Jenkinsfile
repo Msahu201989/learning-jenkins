@@ -12,6 +12,9 @@ pipeline {
     }
 
     stage('Style Checks') {
+    when {
+      branch 'master
+      '}
       steps {
         echo 'Code Quality'
       }
