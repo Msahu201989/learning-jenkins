@@ -27,7 +27,7 @@ pipeline {
     }
 
     stage('Download Dependencies') {
-    when { tag "1.0.1" }
+    when { tag "2.0.2" }
        steps {
         echo 'Download Dependencies'
       }
