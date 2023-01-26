@@ -12,7 +12,7 @@ pipeline {
 
     stage('Style Checks') {
     when {
-      branch 'master'
+      branch 'main'
       }
 
       steps {
