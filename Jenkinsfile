@@ -12,7 +12,7 @@ pipeline {
 
     stage('Style Checks') {
     when {
-      branch 'demo'
+      branch 'main'
       }
 
       steps {
@@ -27,7 +27,13 @@ pipeline {
     }
 
     stage('Download Dependencies') {
-    when { tag "2.0.2" }
+    when {
+       anyof {
+         branch 'main'
+         tag "*"
+          }
+       }
+
        steps {
         echo 'Download Dependencies'
       }
