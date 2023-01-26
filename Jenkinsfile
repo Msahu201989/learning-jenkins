@@ -27,14 +27,7 @@ pipeline {
     }
 
     stage('Download Dependencies') {
-    when {
-       anyof {
-         branch 'main'
-         tag "*"
-          }
-       }
-
-       steps {
+         steps {
         echo 'Download Dependencies'
       }
     }
