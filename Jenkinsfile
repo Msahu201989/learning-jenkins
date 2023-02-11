@@ -31,7 +31,12 @@ pipeline {
         echo 'Download Dependencies'
       }
     }
-
+    
+    stage('Auto Trigger') {
+      steps {
+        echo 'Auto Trigger'
+      }
+    }
     stage('Prepare Artifact') {
       steps {
         echo 'Prepare Artifact'
