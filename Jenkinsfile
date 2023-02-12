@@ -37,11 +37,7 @@ pipeline {
         echo 'Auto Trigger'
       }
     }
-      stage('Learning Auto Trigger') {
-      steps {
-        echo 'Learning Auto Trigger'
-      }
-    }
+
     stage('Prepare Artifact') {
       steps {
         echo 'Prepare Artifact'
