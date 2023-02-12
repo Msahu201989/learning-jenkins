@@ -21,6 +21,9 @@ pipeline {
     }
 
     stage('Unit Tests') {
+          when {
+      branch 'main'
+          }
       steps {
         echo 'Unit tests'
       }
