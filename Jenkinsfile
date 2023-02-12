@@ -32,11 +32,7 @@ pipeline {
       }
     }
     
-    stage('Auto Trigger') {
-      steps {
-        echo 'Auto Trigger'
-      }
-    }
+
 
     stage('Prepare Artifact') {
       steps {
