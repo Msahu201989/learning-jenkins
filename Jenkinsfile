@@ -1,8 +1,6 @@
 pipeline {
 
-  agent {
-    node 'worskstation'
-    }
+  agent any
 
   stages {
 
